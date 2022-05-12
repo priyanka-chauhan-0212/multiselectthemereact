@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Card.css";
+import { ThemeContext } from "./Theme";
 
-export default function Home(theme) {
-  const [th, setTh] = useState(theme);
+export default function Home() {
+  const themeContext = useContext(ThemeContext);
+  const [th] = useState(themeContext);
 
   return (
-    <div class="container">
-      <div class="row"></div>
-      <div class="row">
-        <div class="card text-center bg-red bg-yellow">
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">
+    <div className="container">
+      <div className="row"></div>
+      <div className="row">
+        <div className={`card text-center bg-${th}`}>
+          <div className="card-body">
+            <h5 className="card-title">Special title treatment</h5>
+            <p className="card-text">
               With supporting text below as a natural lead-in to additional
               content.
             </p>
-            <a href="#" class="btnsample ">
-              Go somewhere
-            </a>
+            <button className={`btn btn-${th}`}>Go somewhere</button>
           </div>
         </div>
       </div>

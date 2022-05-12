@@ -18,3 +18,15 @@
   background-color: yellow;
   color: black;
 }
+.bg-green {
+  background-color: rgb(15, 131, 54);
+  color: white;
+}
+.bg-blue {
+  background-color: rgb(85, 76, 211);
+  color: white;
+}
+.bg-dark {
+  background-color: rgba(73, 73, 64, 0.041);
+  color: white;
+}
