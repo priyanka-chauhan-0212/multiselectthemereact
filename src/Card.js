@@ -1,32 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Card.css";
 
-export default function Home() {
+export default function Home(theme) {
+  const [th, setTh] = useState(theme);
+
   return (
     <div class="container">
-      <div class="row">
-        <div
-          class="btn-group p-5"
-          role="group"
-          aria-label="Basic mixed styles example"
-        >
-          <button type="button" class="btn btn-danger">
-            Red
-          </button>
-          <button type="button" class="btn btn-warning">
-            Yellow
-          </button>
-          <button type="button" class="btn btn-success">
-            Green
-          </button>
-          <button type="button" class="btn btn-primary">
-            blue
-          </button>
-          <button type="button" class="btn btn-dark">
-            Dark
-          </button>
-        </div>
-      </div>
+      <div class="row"></div>
       <div class="row">
         <div class="card text-center bg-red bg-yellow">
           <div class="card-body">
